@@ -1,0 +1,27 @@
+.campaigns-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 1rem;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+
+  .searchbar {
+    width: 300px;
+    border: 1px solid lightgray;
+    border-radius: 0.5rem;
+    outline: none;
+    height: 40px;
+    padding-left: 0.5rem;
+  }
+
+  .select {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    cursor: pointer;
+    outline: none;
+    height: 40px;
+  }
+}

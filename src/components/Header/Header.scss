@@ -1,0 +1,23 @@
+header {
+  height: 80px;
+  background: rgb(255, 123, 75);
+  padding: 0 1rem;
+
+  h1 {
+    color: white;
+  }
+
+  .logout-btn {
+    margin-left: auto;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.2s all ease;
+
+    &:hover {
+      color: rgb(26, 26, 26);
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.main {
+  display: grid;
+  grid-template-columns: minmax(250px, 1.5fr) minmax(auto, 8.5fr);
+
+  section {
+    height: calc(100vh - 80px);
+  }
+}
+
+Outlet {
+  padding: 2rem;
+}
