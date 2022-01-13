@@ -36,7 +36,7 @@ const CampaignsFilter: React.FC = () => {
       />
 
       <select className="select" name="sortCampaigns" onChange={handleSelect}>
-        <option value="default" selected disabled hidden>
+        <option value="" selected disabled hidden>
           Puana Göre Sırala
         </option>
         <option value="descending">Yüksek Puandan Düşük Puana</option>
