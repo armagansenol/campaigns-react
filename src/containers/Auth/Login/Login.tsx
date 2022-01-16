@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { login } from "../../../store/actions/authActions";
@@ -11,7 +11,11 @@ const Login: React.FC = () => {
 
   const isAuth: boolean = useSelector((state: RootState) => state.auth);
 
-  const [authStatus, setAuthStatus] = useState<boolean>(isAuth);
+  useEffect(() => {
+    if (isAuth === true) {
+      navigate("/campaigns-list");
+    }
+  });
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -21,14 +25,7 @@ const Login: React.FC = () => {
       password: { value: string };
     };
 
-    const username = target.username.value;
-    const password = target.password.value;
-
-    if (username === "admin" && password === "123123") {
-      // setAuthStatus(true);
-      dispatch(login(username, password));
-      navigate("/campaigns-list");
-    }
+    dispatch(login(target.username.value, target.password.value));
   };
 
   return (
@@ -38,19 +35,21 @@ const Login: React.FC = () => {
         <form onSubmit={handleSubmit}>
           <div className="form-inputs">
             <div className="form-input">
-              <input type="text" placeholder="Kullanıcı Adı" name="username" required />
-              <div className="error">
-                <small>Bu alan boş bırakılamaz</small>
-              </div>
+              <input type="text" placeholder="Username" name="username" required />
+              {/*               <div className="error">
+                <small>This area cannot be empty</small>
+              </div> */}
             </div>
             <div className="form-input">
-              <input type="password" placeholder="Şifre" name="password" required />
-              <div className="error">
-                <small>Bu alan boş bırakılamaz</small>
-              </div>
+              <input type="password" placeholder="Password" name="password" required />
+              {/*               <div className="error">
+                <>Bu alan boş bırakılamaz</              <div className="error">
+                <small>This area cannot be empty</small>
+              </div>small>
+              </div> */}
             </div>
           </div>
-          <button type="submit">Giriş Yap</button>
+          <button type="submit">Login</button>
         </form>
       </div>
     </div>

@@ -16,9 +16,9 @@ function App() {
           <Route
             path="/"
             element={
-              // <RequireAuth>
-              <Main />
-              // </RequireAuth>
+              <RequireAuth>
+                <Main />
+              </RequireAuth>
             }
           >
             <Route path="/new-campaign" element={<CampaignsCreate />} />
