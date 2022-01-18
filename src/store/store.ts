@@ -22,7 +22,7 @@ store.subscribe(
       campaigns: store.getState().campaigns,
       auth: store.getState().auth,
     });
-  })
+  }, 1000)
 );
 
 export type RootState = ReturnType<typeof rootReducer>;

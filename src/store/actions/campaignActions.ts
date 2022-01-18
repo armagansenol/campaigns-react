@@ -51,13 +51,13 @@ export const updateCampaignRating = (id: string, rating: number): Action => {
 export const searchCampaigns = (searchTerm: string): Action => {
   return {
     type: ActionType.SEARCH_CAMPAIGNS,
-    payload: { searchTerm },
+    payload: searchTerm,
   };
 };
 
-export const sortCampaigns = (sortBy: string): Action => {
+export const sortCampaigns = (sortBy: string | null): Action => {
   return {
     type: ActionType.SORT_CAMPAIGNS,
-    payload: { sortBy },
+    payload: sortBy,
   };
 };

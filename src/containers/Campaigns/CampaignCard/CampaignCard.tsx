@@ -5,7 +5,7 @@ import downArrow from "../../../assets/arrow-down-outline.svg";
 import { Campaign } from "../../../store/types";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { updateCampaignRating } from "../../../store/actions";
+import { sortCampaigns, updateCampaignRating } from "../../../store/actions";
 import Modal from "../../Modal/Modal";
 import { useModal } from "../../../hooks/useModal";
 import CampaignsEdit from "../CampaignsEdit/CampaignsEdit";
@@ -26,6 +26,7 @@ const CampaignCard: React.FC<CampaignCardProps> = ({ campaign }) => {
   }, [rating]);
 
   const updateRating = (updateType: string) => {
+    // dispatch(sortCampaigns(null));
     if (updateType === "increase") {
       setRating(rating + 1);
     } else if (updateType === "decrease" && rating > 0) {

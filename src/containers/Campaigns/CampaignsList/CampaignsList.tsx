@@ -15,7 +15,6 @@ const CampaignsList: React.FC = () => {
       const filtered = Object.values(campaigns).filter((cmp) => {
         return cmp.title.includes(term) || cmp.description.includes(term);
       });
-
       return filtered;
     }
 
@@ -44,7 +43,7 @@ const CampaignsList: React.FC = () => {
           })
         ) : (
           <div style={{ fontSize: "1.5rem", fontWeight: "500", alignSelf: "center", margin: "2rem" }}>
-            Campaign Not Found
+            No Campaigns Found
           </div>
         )}
       </div>

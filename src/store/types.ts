@@ -77,16 +77,12 @@ interface UpdateCampaignAction {
 
 interface SearchCampaignsAction {
   type: typeof ActionType.SEARCH_CAMPAIGNS;
-  payload: {
-    searchTerm: string;
-  };
+  payload: string;
 }
 
 interface SortCampaignsAction {
   type: typeof ActionType.SORT_CAMPAIGNS;
-  payload: {
-    sortBy: string;
-  };
+  payload: string | null;
 }
 
 interface UpdateCampaignRatingAction {

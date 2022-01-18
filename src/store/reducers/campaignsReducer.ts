@@ -40,12 +40,12 @@ const campaignsReducer = (state = initialState, action: Action): CampaignsState 
     case ActionType.SEARCH_CAMPAIGNS:
       return {
         ...state,
-        searchTerm: action.payload.searchTerm,
+        searchTerm: action.payload,
       };
     case ActionType.SORT_CAMPAIGNS:
       return {
         ...state,
-        sortBy: action.payload.sortBy,
+        sortBy: action.payload,
       };
     default:
       return state;

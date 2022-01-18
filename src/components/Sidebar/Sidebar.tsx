@@ -5,7 +5,7 @@ const Sidebar: React.FC = () => {
   return (
     <section className="sidebar">
       <div className="sidebar-item">
-        <Link to="new-campaign">Create Campaign</Link>
+        <Link to="new-campaign">Add New Campaign</Link>
       </div>
       <div className="sidebar-item">
         <Link to="campaigns-list">All Campaigns</Link>
